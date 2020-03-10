@@ -17,6 +17,7 @@ import javax.persistence.Table;
 
 public class Pesquisa extends AbstractEntity {
 
+
     @Column(name = "Descricao", nullable = false)
     private String descricao;
 

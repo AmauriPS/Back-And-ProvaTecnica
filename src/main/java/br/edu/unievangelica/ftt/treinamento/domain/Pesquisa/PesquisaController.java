@@ -14,9 +14,14 @@ public class PesquisaController extends AbstractController<Pesquisa> {
     @Autowired
     PesquisaService pesquisaService;
 
-    @CrossOrigin
     @PostMapping("pesquisa")
     public ResponseEntity<?> findByPesquisa(@RequestBody Pesquisa pesquisa, Errors errors){
         return jsonResponse(pesquisaService.findByPesquisa(pesquisa, errors));
+    }
+    
+    // pq isso não sobe?
+    @PostMapping("salvar")
+    public ResponseEntity<?> save(@RequestBody Pesquisa pesquisa, Errors errors){
+        return jsonResponse(service.save(pesquisa, errors));
     }
 }
